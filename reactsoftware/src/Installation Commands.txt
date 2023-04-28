@@ -1,0 +1,4 @@
+Redux Toolkit
+
+npm install react-redux
+npm install react-redux
