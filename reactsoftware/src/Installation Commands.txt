@@ -6,4 +6,4 @@ npm install react-redux
 Chakra UI
 https://chakra-ui.com/getting-started
 
-
+t
