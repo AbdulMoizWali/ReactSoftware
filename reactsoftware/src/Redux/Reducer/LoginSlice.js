@@ -6,7 +6,10 @@ const LoginSlice = createSlice({
         dummyData: "Testing.......",
     },
     reducers: {
-        add(state, actions) {},
+        add(state, actions) {
+            state.email = actions.payload.email;
+            state.password = actions.payload.password;
+        },
         del(state, actions) {},
     },
 });
