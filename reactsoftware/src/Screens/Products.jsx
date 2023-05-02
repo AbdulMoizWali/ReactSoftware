@@ -21,7 +21,8 @@ export default function Products() {
     
     const CartData = (Product)=>{
         dispatch(add(Product));
-        //navigate("/cart");
+        //console.log(Product);
+        navigate("/cart");
     }
   return (
     <>
