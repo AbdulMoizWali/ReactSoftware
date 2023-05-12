@@ -1,0 +1,13 @@
+node server.js
+
+run in terminal
+
+then type http://localhost:5000/course
+to get the data from custom api
+when you change anything in server class you have to run the node server.js again
+
+
+
+Thunder Client extension VS code 
+
+Json Formatter Google Chrome extension
