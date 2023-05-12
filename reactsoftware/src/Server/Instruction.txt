@@ -1,3 +1,6 @@
+Note: The command npx create-react-app pname is not required
+
+
 node server.js
 
 run in terminal
@@ -11,3 +14,20 @@ when you change anything in server class you have to run the node server.js agai
 Thunder Client extension VS code 
 
 Json Formatter Google Chrome extension
+
+
+
+
+ To install Express
+ ------------------------------------------------------
+1) when there is not pasckage.Json and to make server.js as default entry point
+
+ npm init
+ Then Enter Enter then
+ Enter Entry point: (server.js) 
+ OK 
+ Yes
+
+2) npm i express
+
+

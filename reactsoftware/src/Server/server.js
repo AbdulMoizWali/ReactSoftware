@@ -30,7 +30,7 @@ const fs = require("fs");
 //     }
 
 // })
-const http = require("http");
+// const http = require("http");
 
 let courses = [
     {
@@ -51,23 +51,54 @@ let courses = [
     }
 ]
 
-const server = http.createServer((req, res)=>{
-    if(req.url == '/course'){
-        //res.write("/Courses Route is working");
-        if(req.method == "GET"){
-            res.write(JSON.stringify(courses));
-        }
-        if(req.method == "POST"){
-            req.body
-            res.write(JSON.stringify(courses));
-        }
-        res.end();
+// const server = http.createServer((req, res)=>{
+//     if(req.url == '/course'){
+//         //res.write("/Courses Route is working");
+//         if(req.method == "GET"){
+//             res.write(JSON.stringify(courses));
+//         }
+//         if(req.method == "POST"){
+//             req.body
+//             res.write(JSON.stringify(courses));
+//         }
+//         res.end();
+//     }
+//     if(req.url == '/users'){
+//         res.write("/Users Route is working");
+//         res.end();
+//     }
+// });
+
+
+// server.listen(5000)
+
+
+
+
+
+const express = require("express");
+
+const app = express();
+
+app.get("/courses", (req, res)=>{
+res.json(courses)
+});
+
+app.get("/courses/:id", (req, res) => {
+    let id = req.params.id
+    let obj = courses.find(x=>x.id == id);
+    if (obj){
+        res.send(obj).status(200);
     }
-    if(req.url == '/users'){
-        res.write("/Users Route is working");
-        res.end();
+    else{
+        res.send("No Data Found").status(404);
     }
 });
 
+app.post("/courses", (req, res)=>{ });
+app.put("/courses/:id", (req, res)=>{ });
+app.delete("/courses/:id", (req, res)=>{ });
 
-server.listen(5000)
+    
+
+app.listen(5000);
